@@ -1,0 +1,93 @@
+.v-main {
+    width: 100%;
+    height: 100%;
+    /*position: absolute;*/
+}
+
+.v-main > .event-area {
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+}
+
+/*.v-main > .menu-area {
+    width: 100%;
+    height: 70px;
+    background-color: #000;
+}*/
+
+.v-main > .page-area {
+    width: 100%;
+    background-color: #090909;
+}
+
+.v-main-monitoring > .map-area {
+    width: 100%;
+    height: calc(100% - 140px);
+    position: absolute;
+    background-color: #1d1d1d;
+}
+
+/*추가*/
+.v-main .ns-title {
+    display: flex;
+    /*background: #111;*/
+    height: 70px;
+    align-items: center;
+    padding: 0px 10px;
+    text-align: left;
+}
+
+.v-main .ns-title > a {
+    display: block;
+    width: 190px;
+    height: 36px;
+    background: url(@/images/mng/logo.png) no-repeat;
+    background-size: 100%;
+    font-size: 0px;
+}
+
+/*.v-main > .menu-area {
+    width: 100%;
+    height: 80px;
+    background-color: #000;
+}*/
+
+.v-main > .menu-area {
+    position: relative;
+    width: 300px;
+    height: calc(100vh - 80px);
+    float: left;
+    background: #0033ff;
+}
+
+.v-main > .contents-area {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 300px);
+    /*width: 100%;*/
+    height: calc(100vh - 120px);
+    min-height: calc(100vh - 120px);
+    /*padding : 0px 50px 0px;*/
+    overflow-y: auto;
+    background: #f1f5f7;
+    margin-top: 35px;
+
+    /*width: calc(100% - 100px);
+    height: 100%;
+    float: right;
+    transition-duration: 0.4s;
+   !* overflow-y:auto;*!
+    background: #f1f5f7;*/
+}
+
+.v-main.on > .contents-area {
+    width: calc(100% - 300px);
+    transition-duration: 0.4s;
+
+}
+
+/*
+.v-main > .page-area {
+    width: 100%;   background-color: #090909;
+}*/

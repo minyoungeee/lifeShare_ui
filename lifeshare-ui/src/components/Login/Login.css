@@ -1,0 +1,74 @@
+.ns-login {
+    width: 100%;
+}
+
+.ns-login .field-wrapper {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    align-items: center;
+}
+
+.ns-login .field-wrapper > .k-input {
+    width:100%;
+    margin-bottom:5px;
+    border-color:#ededf0;
+}
+.v-login .k-input{
+    border-color:#ededf0;
+
+}
+.v-login .k-input:focus{
+    border-color:#333643;
+}
+
+.ns-login .field-wrapper > .k-button {
+    width:100%;
+    margin-top:20px;
+    margin-bottom:25px;
+    background:#0475f4;
+    border:0px;
+}
+
+.ns-login .field-wrapper > .k-button > span {
+    font-size:15px;
+    color:#fff;
+    font-weight:500;
+}
+
+.ns-login .field-wrapper > span > .k-checkbox + label::before {
+    margin-right:10px;
+    top:6px;
+}
+
+.ns-login .field-wrapper > span > .k-checkbox + label {
+    font-size:13px;
+    color:rgba(51, 54, 67, 0.5);
+    margin-top: 7px;
+}
+
+.ns-login ul {
+    display:flex;
+    margin-top:5px;
+}
+
+.ns-login ul li span {
+    font-size:13px;
+    color:rgba(51, 54, 67, 0.5);
+}
+
+.ns-login ul li:last-child::before {
+    content:"";
+    display:inline-block;
+    width:1px;
+    height:12px;
+    vertical-align: middle;
+    background:#d9d9d9;
+    opacity:0.8;
+    margin:0px 10px;
+    vertical-align: middle;
+}
+
+.ns-login .k-checkbox {
+    top: 4px;
+}
