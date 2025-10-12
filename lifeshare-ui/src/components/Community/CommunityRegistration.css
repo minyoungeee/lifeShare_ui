@@ -1,0 +1,106 @@
+body {
+    background-color: #f5fff7;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    color: #333643;
+    margin: 0;
+    padding: 0;
+}
+
+.ns-employ-register {
+    max-width: 1000px;
+    margin: 60px auto;
+    background: #fff;
+    padding: 40px 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+/* ✅ 제목을 카드 안으로 옮겼으니 이제 여기가 먹어요 */
+.ns-employ-register .k-h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #8256c8;
+    border-left: 5px solid #8256c8;
+    padding-left: 12px;
+    margin-bottom: 25px;
+}
+
+.ns-employ-register table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ns-employ-register th {
+    text-align: left;
+    width: 120px;
+    font-weight: 600;
+    color: rgba(51, 54, 67, 0.85);
+    padding: 12px 10px;
+}
+
+.ns-employ-register td {
+    padding: 12px 0;
+}
+
+.ns-employ-register .k-input {
+    border-color: #e2e2e2;
+    border-radius: 8px;
+}
+.ns-employ-register .k-input:focus {
+    border-color: #8256c8;
+    box-shadow: 0 0 0 3px rgba(25, 160, 6, 0.1);
+}
+
+.ns-employ-register .btnWrap {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ededf0;
+}
+
+.ns-employ-register .btnWrap .k-button {
+    min-width: 90px;
+    height: 38px;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.ns-employ-register .btnWrap .k-button:first-child {
+    background: #8256c8;
+    color: #fff;
+    border: none;
+}
+.ns-employ-register .btnWrap .k-button:first-child:hover {
+    background: #8256c8;
+    transform: translateY(-1px);
+}
+
+.ns-employ-register .btnWrap .k-button:last-child {
+    background: #fff;
+    color: #8256c8;
+    border: 1px solid #8256c8;
+}
+.ns-employ-register .btnWrap .k-button:last-child:hover {
+    background: #f4fff2;
+    transform: translateY(-1px);
+}
+
+.rich-text-editor .ck-editor__editable_inline {
+    min-height: 200px;
+    border-radius: 8px;
+    border: 1px solid #e2e2e2;
+    font-size: 14px;
+    padding: 10px;
+    line-height: 1.6;
+}
+.rich-text-editor .ck-editor__editable_inline:focus {
+    border-color: #8256c8;
+    box-shadow: 0 0 0 3px rgba(25, 160, 6, 0.1);
+}

@@ -1,0 +1,73 @@
+{
+  "upload": {
+    "cancel": "취소",
+    "clearSelectedFiles": "클리어",
+    "dropFilesHere": "",
+    "headerStatusUploaded": "완료",
+    "headerStatusUploading": "진행 중...",
+    "invalidFileExtension": "허용되지 않은 파일형식입니다.",
+    "invalidFiles": "유효하지 않는 파일입니다. 확인 후 업로드해주세요.",
+    "invalidMaxFileSize": "파일 사이즈가 너무 큽니다.",
+    "invalidMinFileSize": "파일 사이즈가 너무 작습니다.",
+    "remove": "삭제",
+    "retry": "재시도",
+    "select": "파일선택",
+    "uploadSelectedFiles": ",",
+    "total": "전체",
+    "files": "파일",
+    "statusUploaded": "업로드 성공",
+    "statusUploadFailed": "업로드 실패",
+    "dropZoneHint": "",
+    "dropZoneNote": ""
+  },
+  "datepicker": {
+    "toggleCalendar": ""
+  },
+  "calendar": {
+    "today": "오늘"
+  },
+  "dateinput": {
+    "increment": "+",
+    "decrement": "-"
+  },
+  "datetimepicker": {
+    "date": "날짜",
+    "time": "시간",
+    "cancel": "취소",
+    "set": "설정"
+  },
+  "timepicker": {
+    "set": "설정",
+    "cancel": "취소",
+    "now": "오늘",
+    "selectNow": "오늘 선택",
+    "toggleTimeSelector": "",
+    "toggleClock": ""
+  },
+  "daterangepicker": {
+    "swapStartEnd": "",
+    "start": "시작",
+    "end": "끝"
+  },
+  "scheduler": {
+    "recurrenceEditorRepeat": "반복일정",
+    "recurrenceEditorDailyRepeatEvery": "반복기한",
+    "recurrenceEditorMonthlyRepeatEvery": "반복기한",
+    "recurrenceEditorNeverRepeatEvery": "반복기한",
+    "recurrenceEditorWeeklyRepeatEvery": "반복기한",
+    "recurrenceEditorYearlyRepeatEvery": "반복기한",
+
+    "recurrenceEditorFrequenciesDaily": "일간",
+    "recurrenceEditorFrequenciesMonthly": "월간",
+    "recurrenceEditorFrequenciesNever": "반복없음",
+    "recurrenceEditorFrequenciesWeekly": "주간",
+    "recurrenceEditorFrequenciesYearly": "연간",
+    "recurrenceEditorWeeklyRepeatOn": "반복일자",
+    "recurrenceEditorMonthlyRepeatOn": "반복일자",
+    "recurrenceEditorYearlyRepeatOn": "반복일자",
+    "recurrenceEditorEndLabel": "반복종료",
+
+    "editSave": "예약하기",
+    "editCancel": "취소하기"
+  }
+}

@@ -1,0 +1,32 @@
+.ns-menu-contents {
+    width: 100%;
+}
+
+.ns-menu-contents .k-panelbar {
+    padding: 0px;
+    background:transparent;
+}
+
+.ns-menu-contents .k-panelbar .k-panelbar-content {
+    padding: 25px;
+    border: 1px solid #1d1d1d;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.ns-menu-contents .k-panelbar > .k-panelbar-header > .k-link.k-selected,
+.ns-menu-contents .k-panelbar > .k-panelbar-header > .k-link.k-selected:hover,
+.ns-menu-contents .k-panelbar > .k-panelbar-header > .k-link:hover {
+    background: #1a1a1a !important;
+    cursor: pointer;
+}
+
+.ns-menu-contents .k-panelbar > .k-panelbar-header {
+    margin-bottom: 10px;
+}
+
+.ns-menu-contents .k-panelbar > .k-panelbar-item > .k-link {
+    height: 56px;
+    border-radius: 7px;
+    padding: 0 20px;
+}

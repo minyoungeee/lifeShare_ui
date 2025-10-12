@@ -1,0 +1,7 @@
+.navibar-wrapper {
+    width: 100%;
+    height: 80px;
+    background: #eee;
+    line-height: 75px;
+    border-bottom: 2px solid #ddd;
+}

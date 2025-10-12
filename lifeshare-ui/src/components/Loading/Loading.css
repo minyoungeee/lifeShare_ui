@@ -1,0 +1,15 @@
+.ns-loading-spinner {
+    width: 100%;
+    text-align: center;
+}
+
+.ns-loading-spinner .spinner-box {
+    padding: 20px;
+    /*border: 1px solid #ddd;*/
+    border-radius: 5px;
+    background: rgba(58, 65, 80, 0.6);
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    margin: 0 auto;
+}

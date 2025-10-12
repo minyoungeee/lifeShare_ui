@@ -24,6 +24,7 @@ export const auth = {
                 return res;
             })
             .catch((err) => {
+                console.error("🚨 API ERROR", err.response?.status, err.response?.data || err.message);
                 return err.response.data.message;
             });
     },
@@ -38,7 +39,7 @@ export const auth = {
     reqLogout: () => {
         return axios.post("/auth/logout")
             .then((res) => {
-                return res.data.result;
+                return res.data;
             })
             .catch((err) => {
                 return err.response.data.message;

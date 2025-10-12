@@ -2,8 +2,13 @@ import {Fragment, memo, useCallback, useContext, useEffect, useRef, useState} fr
 import "@/components/Login/Login.css";
 import {useDispatch, useSelector} from "react-redux";
 import {login} from "@/redux/action/AuthAction";
-
-import {Link} from "react-router-dom";
+import {Checkbox, Input} from "@progress/kendo-react-inputs";
+import {Form, Formik} from "formik";
+import {modalContext} from "@/components/Common/Modal.jsx";
+import {loadingSpinnerContext} from "@/components/Common/LoadingSpinner.jsx";
+import ServiceApi from "@/common/ServiceApi.js";
+import {useNavigate} from "react-router-dom";
+import {Button} from "@progress/kendo-react-buttons";
 
 /**
  * Login 화면 클래스
@@ -23,7 +28,7 @@ const Login = (props) => {
 
     //redux dispatch
     const dispatch = useDispatch();
-    const history = useHistory();
+    const navigate = useNavigate();
 
     //context api
     const modal = useContext(modalContext);
@@ -63,19 +68,26 @@ const Login = (props) => {
 
             //rsa
             const params = {...formData};
-            const encrypt = new JSEncrypt();
-            encrypt.setPublicKey(auth.publicKey);
-            params.userId = encrypt.encrypt(params.userId);
-            params.pwd = encrypt.encrypt(params.pwd);
+            console.log("params", params);
+
+            // 보안용 RSA 로그인 우선 보류
+            // const encrypt = new JSEncrypt();
+            // encrypt.setPublicKey(auth.publicKey);
+            // params.userId = encrypt.encrypt(params.userId);
+            // params.pwd = encrypt.encrypt(params.pwd);
 
             const {data, headers} = await ServiceApi.auth.reqLogin(params);
-            const result = data.result;
+            const result = data;
+
+            console.log('result', result);
+
+
             //미승인 회원
-            /*if (result.user === "nonApprovedUser") {
-                modal.showAlert("알림", "가입이 승인되지 않은 회원입니다.\r\n관리자에게 문의하여 주십시오.");
-                loadingSpinner.hide();
-                return false;
-            }*/
+            // if (result.user === "nonApprovedUser") {
+            //     modal.showAlert("알림", "가입이 승인되지 않은 회원입니다.\r\n관리자에게 문의하여 주십시오.");
+            //     loadingSpinner.hide();
+            //     return false;
+            // }
             let token = headers["authorization"];
             if (token != undefined && token != null) {
                 token = token.replace("Bearer ", "");
@@ -95,7 +107,7 @@ const Login = (props) => {
                             {
                                 title: "변경하기",
                                 click: () => {
-                                    history.push({
+                                    navigate({
                                         pathname: "/login/change/pwd",
                                         state: {...result.user}
                                     });
@@ -107,7 +119,7 @@ const Login = (props) => {
                                     dispatch(login({
                                         ...result.user
                                     }));
-                                    history.push("/predict/traffic/monitoring");
+                                    navigate("/predict/traffic/monitoring");
                                 }
                             }
                         ]
@@ -117,7 +129,7 @@ const Login = (props) => {
                     dispatch(login({
                         ...result.user
                     }));
-                    history.push("/keyword/list");
+                    navigate("/community/list");
                 }
                 //로그인 실패
             } else {
@@ -178,7 +190,7 @@ const Login = (props) => {
                         formik => {
                             return (
                                 <Fragment>
-                                    <h1>neighbor system</h1>
+                                    <h1>LifeShare</h1>
                                     <Form ref={formRef}>
                                         <fieldset className={"field-wrapper"}>
                                             <Input
@@ -189,7 +201,7 @@ const Login = (props) => {
                                                 minLength={4}
                                                 maxLength={12}
                                                 required={true}
-                                                defaultValue={formData.userId}
+                                                defaultValue={formData.userId || ''}
                                                 onChange={(event) => onChangeHandler("userId", event)}
                                             />
                                             <Input

@@ -7,6 +7,10 @@ export default defineConfig(({ command, mode }) => {
 
     return {
         plugins: [react()],
+        assetsInclude: ['**/license.key'],
+        css: {
+            modules: false,
+        },
         resolve: {
             alias: {
                 '@': path.resolve(__dirname, './src'),
@@ -14,6 +18,7 @@ export default defineConfig(({ command, mode }) => {
             extensions: ['.js', '.jsx'],
         },
         server: {
+            port: 5173,
             proxy: {
                 '/api': {
                     target: 'http://localhost:8989/api',

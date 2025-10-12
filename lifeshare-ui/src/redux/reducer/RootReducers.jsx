@@ -10,7 +10,7 @@ import {event} from "@/redux/reducer/EventReducer";
 const persistConfig = {
     key: 'root@rd2',
     storage,
-    whiteList : []
+    whiteList : [auth]
 };
 
 const rootReducer = combineReducers({

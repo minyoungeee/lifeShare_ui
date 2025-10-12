@@ -3,6 +3,8 @@
 }
 
 .ns-login .field-wrapper {
+    border: none;
+    outline: none;
     display:flex;
     justify-content: space-between;
     flex-wrap:wrap;
@@ -26,12 +28,12 @@
     width:100%;
     margin-top:20px;
     margin-bottom:25px;
-    background:#0475f4;
+    background: #8256c8;
     border:0px;
 }
 
 .ns-login .field-wrapper > .k-button > span {
-    font-size:15px;
+    font-size:13px;
     color:#fff;
     font-weight:500;
 }

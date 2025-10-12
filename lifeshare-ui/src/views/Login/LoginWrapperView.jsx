@@ -1,6 +1,7 @@
-import {Fragment, memo, useEffect} from 'react';
+import { Fragment, memo } from "react";
 import "@/views/Login/LoginWrapperView.css";
-import {Route, Switch} from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+
 import LoginView from "@/views/Login/view/LoginView";
 // import LoginRegistrationView from "@/views/Login/view/LoginRegistrationView";
 // import LoginFindPasswordView from "@/views/Login/view/LoginFindPasswordView";
@@ -8,40 +9,31 @@ import LoginView from "@/views/Login/view/LoginView";
 
 /**
  * 로그인 래퍼 뷰
- *
- * @author ChoiJisoo
- * @version 1.0.0
-**/
-const LoginWrapperView = (props) => {
-
-    /**
-     * history
-     */
-    const history = useHistory();
-
-    //todo componentDidMount
-    useEffect(() => {
-        history.push("/login");
-    }, []);
-
+ * @author ...
+ **/
+const LoginWrapperView = () => {
     return (
         <Fragment>
-            <main className={"v-login"}>
+            <main className="v-login">
                 <article className="loginForm">
                     <div className="login-wrap">
-                        {/*<h1>*/}
-                        {/*    <a href="#">KT RoadSense</a>*/}
-                        {/*</h1>*/}
-                        <Switch>
-                            <Route path={`${props.match.path}`} exact={true} component={LoginView}/>
-                            {/*<Route path={`${props.match.path}/registration`} exact={true} component={LoginRegistrationView}/>
-                            <Route path={`${props.match.path}/pwd`} exact={true} component={LoginFindPasswordView}/>
-                            <Route path={`${props.match.path}/change/pwd`} exact={true} component={UserPwdChange}/>*/}
-                        </Switch>
+                        <Routes>
+                            {/* ✅ 기본: /login → 로그인 화면 */}
+                            <Route index element={<LoginView />} />
+
+                            {/* ✅ 다른 로그인 관련 탭들 */}
+                            {/* <Route path="registration" element={<LoginRegistrationView />} /> */}
+                            {/* <Route path="pwd" element={<LoginFindPasswordView />} /> */}
+                            {/* <Route path="change/pwd" element={<UserPwdChange />} /> */}
+
+                            {/* ✅ 존재하지 않는 하위 경로는 /login 으로 리다이렉트 */}
+                            <Route path="*" element={<Navigate to="/login" replace />} />
+                        </Routes>
                     </div>
                 </article>
             </main>
         </Fragment>
     );
 };
+
 export default memo(LoginWrapperView);

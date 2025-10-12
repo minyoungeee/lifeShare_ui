@@ -1,0 +1,93 @@
+/* 모달 전체 레이어 */
+.k-window.alert-window {
+    border: none !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    animation: popupFade 0.3s ease-out;
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    color: #333643;
+}
+
+/* 헤더 */
+.k-window-titlebar {
+    background: #f6faf7 !important;
+    border-bottom: 1px solid #e2e6e2 !important;
+    padding: 12px 18px !important;
+}
+
+.k-window-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #19a006;
+    border-left: 4px solid #19a006;
+    padding-left: 10px;
+}
+
+/* 내용 */
+.content-wrapper.popupLayer {
+    padding: 28px 20px 15px 20px;
+    font-size: 15px;
+    color: rgba(51, 54, 67, 0.9);
+    text-align: center;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+/* 버튼 영역 */
+.mt20.ac {
+    padding: 20px 0 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.mt20.ac .btn {
+    width: 120px;
+    height: 40px;
+    font-weight: 500;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.25s ease;
+    border: none;
+    cursor: pointer;
+}
+
+/* 기본 버튼 */
+.mt20.ac .btn.mr10,
+.mt20.ac .btn {
+    background: #19a006;
+    color: #fff;
+}
+
+.mt20.ac .btn.mr10:hover,
+.mt20.ac .btn:hover {
+    background: #138204;
+    transform: translateY(-1px);
+}
+
+/* 취소 버튼 */
+.mt20.ac .btn:last-child {
+    background: #fff;
+    border: 1px solid #19a006;
+    color: #19a006;
+}
+
+.mt20.ac .btn:last-child:hover {
+    background: #f4fff2;
+    transform: translateY(-1px);
+}
+
+/* 팝업 등장 애니메이션 */
+@keyframes popupFade {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

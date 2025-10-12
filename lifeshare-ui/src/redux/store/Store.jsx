@@ -1,4 +1,12 @@
-// import {createStore, applyMiddleware, compose} from 'redux';
-// import persistedReducer from '@/redux/reducer/RootReducers';
-//
-// export default createStore(persistedReducer);
+import { configureStore } from "@reduxjs/toolkit";
+import rootReducer from "@/redux/reducer/RootReducers";
+
+const store = configureStore({
+    reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+            serializableCheck: false,
+        }),
+});
+
+export default store;

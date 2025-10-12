@@ -1,0 +1,10 @@
+.ns-region-dropdownlist,
+.ns-organization-team-dropdownlist {
+    width: 100%;
+}
+
+.ns-region-dropdownlist .root-hide {
+    display: none;
+}
+
+

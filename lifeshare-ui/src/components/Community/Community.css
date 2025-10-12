@@ -1,0 +1,169 @@
+/* ===== 공지사항 리스트 전체 ===== */
+.ns-community-list {
+    width: 100%;
+    max-width: 1200px; /* ✅ 중앙 폭 제한 */
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: "Pretendard", "Noto Sans KR", sans-serif;
+    color: #333643;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    overflow-x: hidden; /* ✅ 오른쪽 잘림 방지 */
+}
+
+/* ===== 제목 ===== */
+.ns-community-list .k-h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #8256c8;
+    border-left: 5px solid #8256c8;
+    padding-left: 10px;
+}
+
+/* ===== 총 개수 텍스트 ===== */
+.ns-community-list .tbl strong {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: rgba(51, 54, 67, 0.7);
+}
+
+/* ===== 헤더 ===== */
+.ns-community-list .list-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f7f8f8;
+    border-bottom: 2px solid #8256c8;
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+/* ===== 리스트 행 ===== */
+.ns-community-list .list-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eaeaea;
+    transition: all 0.15s ease;
+    min-height: 46px;
+    cursor: pointer;
+    background: #fff;
+    padding: 0 15px;
+}
+
+.ns-community-list .list-item:nth-child(even) {
+    background: #fafafa;
+}
+
+.ns-community-list .list-item:hover {
+    background-color: #f3fff0;
+    transform: translateY(-1px);
+}
+
+/* ===== 컬럼 ===== */
+.ns-community-list .col {
+    font-size: 14px;
+    color: #333643;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* 폭 고정 컬럼 */
+.ns-community-list .col.checkbox {
+    width: 60px;
+    flex-shrink: 0;
+}
+
+.ns-community-list .col.number {
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.ns-community-list .col.writer {
+    width: 140px;
+    flex-shrink: 0;
+}
+
+.ns-community-list .col.date {
+    width: 180px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* 제목 컬럼만 좌측 정렬 + flex 확장 */
+.ns-community-list .col.title {
+    flex: 1;
+    text-align: left;
+    justify-content: flex-start;
+    padding-left: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ===== 버튼 영역 ===== */
+.ns-community-list .btnWrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #ededf0;
+    flex-wrap: wrap; /* ✅ 버튼이 잘리지 않도록 */
+    gap: 10px;
+}
+
+/* 버튼 스타일 */
+.ns-community-list .btnWrap .k-button {
+    width: 110px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    height: 38px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+/* 등록 버튼 */
+.ns-community-list .btnWrap .k-button:first-child {
+    background-color: #8256c8;
+    color: #fff;
+    border: none;
+}
+.ns-community-list .btnWrap .k-button:first-child:hover {
+    background-color: #8256c8;
+    transform: translateY(-1px);
+}
+
+/* 삭제 버튼 */
+.ns-community-list .btnWrap .k-button:last-child {
+    background-color: #fff;
+    color: #8256c8;
+    border: 1px solid #8256c8;
+}
+.ns-community-list .btnWrap .k-button:last-child:hover {
+    background-color: #f4fff2;
+    transform: translateY(-1px);
+}
+
+/* 체크박스 */
+.ns-community-list input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #8256c8;
+    transform: scale(1.1);
+}
+
+/* ===== 리스트 헤더 / 행 높이 통일 ===== */
+.ns-community-list .list-header .col,
+.ns-community-list .list-item .col {
+    height: 44px;
+}
